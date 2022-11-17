@@ -1,0 +1,46 @@
+.div{
+    position: relative;
+}
+
+.all{
+    position: absolute;
+    left: 70%;
+}
+
+
+.input{
+    width: 200px;
+    color: rgb(36, 35, 42);
+    font-size: 16px;
+    line-height: 20px;
+    min-height: 28px;
+    border-radius: 4px;
+    padding: 8px 16px;
+    border: none;
+    box-shadow: #023e8a 0px 1px 3px;
+    background: rgb(251, 251, 251);
+    transition: all 0.1s ease 0s;
+}
+
+.input:focus{
+    border: 2px solid #023e8a;
+    outline: none;
+}
+.input:hover{
+    border-color: #ccc;
+}
+
+.button{
+    min-height: 45px;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    background: #ade8f4;
+    box-shadow: #023e8a 0px 1px 3px;
+}
+
+.button:hover,
+  .button:active {
+    background-color: initial;
+    cursor: pointer;
+  }

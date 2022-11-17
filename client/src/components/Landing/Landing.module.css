@@ -1,0 +1,49 @@
+.div{
+    height: 100vh;
+    background-image: url("https://www.gratistodo.com/wp-content/uploads/2016/12/Pokemon-gifs-6.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.img{
+  margin-top: 25px;
+  margin-left: 50px;
+  width: 40%;
+  height: 60%;
+}
+
+.div2{
+  margin-top: 50px;
+  margin-left: 950px;
+}
+
+.button {
+  padding:0.3em 1.2em;
+  height: 110px;
+  width: 300px;
+  background-color: rgba(240, 240, 240, 0.26);
+  border: 1px solid #DFDFDF;
+  border-radius: 16px;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  font-family:cursive;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 28px;
+  padding: 14px 22px;
+  transition: all .2s;
+  touch-action: manipulation;
+}
+  
+  .button:hover {
+    border-color: rgb(247, 42, 42);
+    border-width: 2px;
+  }
+
+.li{
+  width: 300px;
+  display: flex;
+  justify-content: space-evenly;
+}

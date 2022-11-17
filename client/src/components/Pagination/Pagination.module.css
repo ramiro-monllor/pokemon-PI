@@ -1,0 +1,69 @@
+.paginado{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 10px
+}
+
+.desactive {
+    width: 40px;
+    height: 40px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+    color: #0048ff;
+    border-color: #eee;
+}
+
+
+.active {
+    width: 40px;
+    height: 40px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+    color: #0048ff;
+    border-color: #eee;
+    font-weight: 900;
+    border-color: #0048ff;
+    background: white;
+    color: #0048ff;
+    box-shadow: 0 5px 5px rgb(43, 0, 255);
+    transform: translateY(4px);
+}
+
+.flechas{
+    width: 60px;
+    height: 40px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+    color: #920797;
+    border-color: #eee;
+}
+
+
+.flechas:active{
+    font-weight: 900;
+    border-color: #00008a;
+    background: white;
+    color: #00008a;
+    box-shadow: 0 5px 5px rgb(0, 4, 65);
+    transform: translateY(4px);
+}

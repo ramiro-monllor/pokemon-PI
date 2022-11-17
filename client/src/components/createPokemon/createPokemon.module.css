@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+.all{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.create{
+    margin-bottom: 50px;
+    height: 800px;
+    width: 1000px;
+    border-radius: 10%;
+    border: 2px solid;
+    border-color: rgb(255, 255, 255);
+    background-color: #98c1d9;
+    -webkit-box-shadow: 4px 4px 44px -4px rgba(0,0,0,0.59);
+    -moz-box-shadow: 4px 4px 44px -4px rgba(0,0,0,0.59);
+    box-shadow: 4px 4px 44px -4px rgba(0,0,0,0.59);
+    transition: all ease-in-out .4s;
+}
+
+.h1{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Courgette', cursive;
+    text-align: center;
+    font-size: 37px;
+    color: rgb(215, 40, 128);
+    text-shadow: rgb(255, 255, 255) 2px 2px 2px;
+    margin-bottom: 50px;
+}
+
+.divtextimg{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.divtext{
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+    margin-top: 30px;
+}
+
+.divimg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -10px;
+    width: 420px;
+    height: 420px;
+    border: 2px solid;
+    border-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding-top: 10px;
+}
+
+.img{
+    width: 300px;
+    height: 300px;
+    margin-top: 30px;
+}
+
+.labelimg{
+    margin-top: 30px;
+}
+
+.divbutton{
+    display: flex;
+    justify-content: center;
+    margin-top: 55px;
+}
+
+.button{
+    margin-right: 20px;
+    min-height: 45px;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    color: #fff;
+    background-color: #135b92;
+    box-shadow: #023e8a  0px 1px 3px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+
+.button:hover{
+    Transform:scale(0.9);
+    background-color: rgb(58, 112, 174);
+    -webkit-box-shadow: 0px 10px 88px 18px rgba(255,255,255,0.76);
+    -moz-box-shadow: 0px 10px 88px 18px rgba(255,255,255,0.76);
+    box-shadow: 0px 10px 88px 18px rgba(255,255,255,0.76);
+}
+
+.label{
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+.input{
+    width: 100px;
+    color: rgb(36, 35, 42);
+    font-size: 16px;
+    line-height: 20px;
+    min-height: 28px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: #4744ea 0px 1px 3px;
+    background: rgb(251, 251, 251);
+    transition: all 0.1s ease 0s;
+}
+
+.input:focus{
+    outline: none;
+}
+
+.inputimg{
+    width: 200px;
+    color: rgb(36, 35, 42);
+    font-size: 16px;
+    line-height: 20px;
+    min-height: 28px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: #4744ea 0px 1px 3px;
+    background: rgb(251, 251, 251);
+    transition: all 0.1s ease 0s;
+}
+
+.input:focus{
+    outline: none;
+}
+
+.select{
+    height: 30px;
+    width: 123px;
+    border: 1px solid var(--select-border);
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+    margin-right: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #80bfef;
+    box-shadow: #023e8a  0px 1px 3px;
+  }
+  
+.select:focus{
+    border: 2px solid #ade8f4;
+    outline: none;
+}
+
+.diverror{
+    display: flex;
+}
+
+.error{
+    font-size: 10px;
+    color: red;
+    font-weight: bold;
+    margin-left: 5px;
+}
