@@ -14,7 +14,7 @@ export default function PokemonDetails(){
 
     React.useEffect(() => {
         dispatch(detailsPokemon(params.id))
-    },[dispatch])
+    },[params.id, dispatch])
 
     return(
         <div className={style.all}>
@@ -33,7 +33,7 @@ export default function PokemonDetails(){
                 <p>Weight: {details[0].weight}</p>
                 </div>
                 <div className={style.divimg}>
-                <img src={details[0].img} className={style.img}/>
+                <img src={details[0].img} alt="pokemon" className={style.img}/>
                 <p className={style.types}>Type/s: {details[0].types.map((t) => {
                     return t + " "
                 })}</p>

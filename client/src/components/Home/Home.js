@@ -1,7 +1,6 @@
 import React from "react";
 import {useDispatch, useSelector} from "react-redux"
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { clearDetail, getPokemons } from "../../redux/actions";
 
 import style from "./Home.module.css"
@@ -18,6 +17,7 @@ export default function Home(){
     const allPoke = useSelector((state) => state.notFilter)
 
     const [order, setOrder] = useState(" ")
+    console.log(order)
 
     React.useEffect(() => {
         dispatch(getPokemons())
@@ -26,6 +26,7 @@ export default function Home(){
 
     const [currentPage, setCurrentPage] = useState(1)
     const [pokemonsPerPage, setPokemonsPerPage] = useState(12)
+    console.log(setPokemonsPerPage)
     
     const lastPokemon = currentPage * pokemonsPerPage
     const firstPokemon = lastPokemon - pokemonsPerPage
