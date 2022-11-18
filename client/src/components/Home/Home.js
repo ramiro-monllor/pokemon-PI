@@ -45,7 +45,9 @@ export default function Home(){
                 setCurrentPage={setCurrentPage}
                 setOrder={setOrder}
                 />
-            <img src="https://cdn.dribbble.com/users/621155/screenshots/2835314/simple_pokeball.gif" alt="loading" className={style.loading}/>
+                <div className={style.divloading}>
+                    <img src="https://cdn.dribbble.com/users/621155/screenshots/2835314/simple_pokeball.gif" alt="loading" className={style.loading}/>
+                </div>
           </div>
         )
     }else if(currentPokemons.length){

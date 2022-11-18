@@ -19,8 +19,12 @@ body{
     margin: 0;
 }
 
+.divloading{
+    display: flex;
+    justify-content: center;
+}
+
 .loading{
-    margin-left: 260px;
     margin-top: 80px;
     margin-bottom: 40px;
 }
