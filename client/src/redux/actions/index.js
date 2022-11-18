@@ -12,9 +12,12 @@ export const CREATE_POKEMON = "CREATE_POKEMON"
 export const DETAILS_POKEMON = "DETAILS_POKEMON"
 export const CLEAR_DETAIL = "CLEAR_DETAIL"
 
+// const URL = "http://localhost:3001"
+const URL = "https://pokemon-pi-production-aeba.up.railway.app"
+
 export function getPokemons(){
     return async function(dispatch){
-        let json = await axios.get("http://localhost:3001/api/pokemons")
+        let json = await axios.get(`${URL}/api/pokemons`)
         return dispatch({
             type: GET_POKEMONS,
             payload: json.data
@@ -24,7 +27,7 @@ export function getPokemons(){
 
 export function getTypes(){
     return async function(dispatch){
-        let json = await axios.get("http://localhost:3001/api/types")
+        let json = await axios.get(`${URL}/api/types`)
         return dispatch({
             type: GET_TYPES,
             payload: json.data
@@ -35,7 +38,7 @@ export function getTypes(){
 export function detailsPokemon(id){
     return async function(dispatch){
         try{
-            let json = await axios.get(`http://localhost:3001/api/pokemons/${id}`)
+            let json = await axios.get(`${URL}/api/pokemons/${id}`)
             return dispatch({
                 type: DETAILS_POKEMON,
                 payload: json.data
@@ -49,7 +52,7 @@ export function detailsPokemon(id){
 export function getPokemonName(name){
     return async function(dispatch){
         try{
-        let json = await axios.get(`http://localhost:3001/api/pokemons?name=${name}`)
+        let json = await axios.get(`${URL}/api/pokemons?name=${name}`)
         return dispatch({
             type: GET_POKEMON_NAME,
             payload: json.data
@@ -62,7 +65,7 @@ export function getPokemonName(name){
 
 export function createPokemons(payload){
         return async function(){
-            let json = await axios.post("http://localhost:3001/api/pokemons",payload)
+            let json = await axios.post(`${URL}/api/pokemons`,payload)
             return json
         }
 }
