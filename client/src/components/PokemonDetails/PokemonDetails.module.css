@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Francois+One');
 @import url('https://fonts.googleapis.com/css?family=Candal');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 
 
 .all{
@@ -10,7 +11,21 @@
 
 .card{
     margin-bottom: 50px;
-    height: 670px;
+    height: 600px;
+    width: 530px;
+    border-radius: 10%;
+    border: 2px solid;
+    border-color: rgb(255, 255, 255);
+    background-color: #98c1d9;
+    -webkit-box-shadow: 4px 4px 44px -4px rgba(0,0,0,0.59);
+    -moz-box-shadow: 4px 4px 44px -4px rgba(0,0,0,0.59);
+    box-shadow: 4px 4px 44px -4px rgba(0,0,0,0.59);
+    transition: all ease-in-out .4s;
+}
+
+.cardDB{
+    margin-bottom: 50px;
+    height: 740px;
     width: 530px;
     border-radius: 10%;
     border: 2px solid;
@@ -34,6 +49,7 @@
     font-size: 37px;
     color: rgb(208, 110, 124);
     text-shadow: rgb(255, 255, 255) 2px 2px 2px;
+    margin: 10px 0px 25px 0px;
 }
 
 .text{
@@ -66,6 +82,14 @@
 
 .img{
     margin-top: 50px;
+    margin-right: 10px;
+    height: 300px;
+    width: 300px;
+    filter: drop-shadow(0px 0px 30px #e4d768);
+}
+
+.imgDB{
+    margin-top: 100px;
     margin-right: 10px;
     height: 300px;
     width: 300px;
@@ -118,4 +142,30 @@
     color: rgb(212, 210, 210);
     margin-top: -100px;
     text-shadow: 3px 2px 9px black;
+}
+
+.divdelete{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.delete{
+    margin-right: 40px;
+    margin-top: 30px;
+    min-height: 45px;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    color: #fff;
+    background-color: #e97923;
+    box-shadow: #e00606  0px 1px 3px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Alata', sans-serif;
+    font-size: 14px;
+}
+
+.delete:hover{
+    Transform:scale(0.9);
+    background-color: rgb(220, 71, 34);
 }

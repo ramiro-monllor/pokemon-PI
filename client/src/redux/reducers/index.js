@@ -1,4 +1,4 @@
-import { GET_POKEMONS, GET_TYPES, FILTER_TYPES, FILTER_FROM, ORDER_AZ, ORDER_ATTACK, GET_POKEMON_NAME, CREATE_POKEMON, DETAILS_POKEMON, CLEAR_DETAIL } from "../actions";
+import { GET_POKEMONS, GET_TYPES, FILTER_TYPES, FILTER_FROM, ORDER_AZ, ORDER_ATTACK, GET_POKEMON_NAME, CREATE_POKEMON, DETAILS_POKEMON, CLEAR_DETAIL, DELETE_POKEMON } from "../actions";
 
 const initialState = {
     pokemons: [],
@@ -103,6 +103,10 @@ export default function rootReducer(state = initialState,action){
             return{
                 ...state,
                 pokemons: filterATTACK
+            }
+        case DELETE_POKEMON:
+            return{
+                ...state,
             }
         default:
             return{

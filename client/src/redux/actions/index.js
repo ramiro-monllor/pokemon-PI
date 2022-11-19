@@ -11,6 +11,7 @@ export const GET_POKEMON_NAME = "GET_POKEMON_NAME"
 export const CREATE_POKEMON = "CREATE_POKEMON"
 export const DETAILS_POKEMON = "DETAILS_POKEMON"
 export const CLEAR_DETAIL = "CLEAR_DETAIL"
+export const DELETE_POKEMON = "DELETE_POKEMON"
 
 // const URL = "http://localhost:3001"
 const URL = "https://pokemon-pi-production-aeba.up.railway.app"
@@ -102,5 +103,15 @@ export function clearDetail(payload){
     return{
         type: CLEAR_DETAIL,
         payload: payload
+    }
+}
+
+export function deletePokemon(idPokemon){
+    return async function(dispatch){
+        try{
+            return axios.delete("http://localhost:3001/api/pokemons/"+idPokemon)
+        }catch(e){
+            console.log(e.message)
+        }
     }
 }

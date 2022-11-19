@@ -19,7 +19,7 @@ export default function SearchBar(){
         console.log(name)
     }
 
-    const handleClick = (e) =>{
+    const handleClick = (e) => {
         e.preventDefault()
         dispatch(getPokemonName(name))
         setName("")

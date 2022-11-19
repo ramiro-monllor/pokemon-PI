@@ -84,9 +84,9 @@ async function pokemonByNameDB(value){
           include: {
             model: Type,
             attributes: ["name"],
-            through: {
-                attributes: []
-            },
+            // through: {
+            //     attributes: []
+            // },
           },
     })
     if(!pokeByNameDB.length){
@@ -143,9 +143,9 @@ async function pokemonById(id){
             include: {
                 model: Type,
                 attributes: ["id","name"],
-                through: {
-                    attributes: [],
-                },
+                // through: {
+                //     attributes: [],
+                // },
             },
         });
         let pokeArray = []
