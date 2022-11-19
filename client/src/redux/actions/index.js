@@ -109,7 +109,7 @@ export function clearDetail(payload){
 export function deletePokemon(idPokemon){
     return async function(dispatch){
         try{
-            return axios.delete("http://localhost:3001/api/pokemons/"+idPokemon)
+            return axios.delete(`${URL}/api/pokemons/`+idPokemon)
         }catch(e){
             console.log(e.message)
         }
