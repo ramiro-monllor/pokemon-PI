@@ -31,7 +31,6 @@ async function pokemonAPI(){
     const pokemonURLSt = pokemonURLAPIt.data.results.map((p) => p.url)
     
     const allURLS = pokemonURLS.concat(pokemonURLSt)
-    // const allPromises = await Promise.all(allURLS)
 
     let arrayPokemons = [];
 

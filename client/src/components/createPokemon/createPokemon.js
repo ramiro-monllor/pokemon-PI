@@ -26,7 +26,7 @@ export default function CreatePokemon(){
         if(input.name.search("[^A-Za-z0-9]") !== -1) {
             errors.name = "The name must not contain symbols or spaces."
         }
-        if(pokemons.find(p => p.name === input.name)){
+        if(pokemons.find(p => p.name.toLowerCase() === input.name.toLowerCase())){
             errors.name = "There is already a pokemon with that name, try to create it with another"
         }
         if(parseInt(input.attack) < 1 || parseInt(input.attack) > 100){

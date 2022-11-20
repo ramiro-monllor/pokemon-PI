@@ -13,7 +13,7 @@ router.get("/", async (req,res) => {
             let pokemons = await allPokemons()
             res.status(200).send(pokemons)
         }catch(err){
-            res.status(400).send(err)
+            res.status(400).send(err.message)
         }
     }
 })
@@ -45,8 +45,8 @@ router.delete("/:idPokemon", async (req,res) => {
             where : {id : idPokemon}
         });
         res.status(200).json(deleted)
-    }catch(e){
-        res.status(404).send(e.message)
+    }catch(err){
+        res.status(404).send(err.message)
     }
 })
 
