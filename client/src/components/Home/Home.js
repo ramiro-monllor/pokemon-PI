@@ -87,8 +87,8 @@ export default function Home(){
     }else if(allPoke && currentPokemons.length === 0){
         return (
             <div>
-                 <SearchBar
-                 setCurrentPage={setCurrentPage}
+                <SearchBar
+                setCurrentPage={setCurrentPage}
                 />
                 <Filter
                 setCurrentPage={setCurrentPage}
