@@ -40,6 +40,7 @@ export default function Home(){
         return(
             <div>
                 <SearchBar
+                setCurrentPage={setCurrentPage}
                 />
                 <Filter
                 setCurrentPage={setCurrentPage}
@@ -54,6 +55,7 @@ export default function Home(){
         return(
             <div>
                 <SearchBar
+                setCurrentPage={setCurrentPage}
                 />
                 <Filter
                 setCurrentPage={setCurrentPage}
@@ -86,6 +88,7 @@ export default function Home(){
         return (
             <div>
                  <SearchBar
+                 setCurrentPage={setCurrentPage}
                 />
                 <Filter
                 setCurrentPage={setCurrentPage}

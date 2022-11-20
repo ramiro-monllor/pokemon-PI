@@ -7,7 +7,7 @@ import pokebola from "../../imagenes/pokebola.png"
 
 import style from "./SearchBar.module.css"
 
-export default function SearchBar(){
+export default function SearchBar({setCurrentPage}){
 
     let dispatch = useDispatch()
 
@@ -21,6 +21,7 @@ export default function SearchBar(){
 
     const handleClick = (e) => {
         e.preventDefault()
+        setCurrentPage(1)
         dispatch(getPokemonName(name))
         setName("")
     }
