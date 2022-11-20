@@ -3,15 +3,11 @@ const { Pokemon } = require("../db.js")
 const {pokemonDB, pokemonAPI, allPokemons, pokemonByNameDB, pokemonByNameAPI, pokemonById, createPokemon, getTypes} = require("./functions.js")
 const router = Router();
 
-router.get("/", async (req,res,next) => {
+router.get("/", async (req,res) => {
     let {name} = req.query;
     if(name){
-        try{
             let pokeByName = await pokemonByNameDB(name)
             res.status(200).send(pokeByName)
-        }catch(err){
-            res.status(400).send(err.message)
-        }
     }else{
         try{
             let pokemons = await allPokemons()
@@ -22,7 +18,7 @@ router.get("/", async (req,res,next) => {
     }
 })
 
-router.get("/:idPokemon", async (req,res,next) => {
+router.get("/:idPokemon", async (req,res) => {
     let {idPokemon} = req.params;
     try{
         let pokeById = await pokemonById(idPokemon)
@@ -32,7 +28,7 @@ router.get("/:idPokemon", async (req,res,next) => {
     }
 })
 
-router.post("/", async (req,res,next) => {
+router.post("/", async (req,res) => {
     try{
         let {name,height, weight, hp, attack, defense, speed, img, types} = req.body;
         let newPoke = await createPokemon(name,height, weight, hp, attack, defense, speed, img, types)
@@ -53,5 +49,7 @@ router.delete("/:idPokemon", async (req,res) => {
         res.status(404).send(e.message)
     }
 })
+
+// router.put("/")
 
 module.exports = router;

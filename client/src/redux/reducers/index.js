@@ -33,7 +33,7 @@ export default function rootReducer(state = initialState,action){
         case GET_POKEMON_NAME:
             return{
                 ...state,
-                pokemons: action.payload
+                pokemons: Array.isArray(action.payload) === true ? action.payload : []
             }
         case CREATE_POKEMON:
             return{
@@ -68,14 +68,14 @@ export default function rootReducer(state = initialState,action){
                 filterAZ = state.pokemons
             }else if(action.payload === "az"){
                 filterAZ = state.pokemons.sort(function(a,b){
-                    if(a.name < b.name) {return -1;}
-                    if(a.name > b.name) {return 1;}
+                    if(a.name.toUpperCase() < b.name.toUpperCase()) {return -1;}
+                    if(a.name.toUpperCase() > b.name.toUpperCase()) {return 1;}
                     return 0;
                 })
             }else if(action.payload === "za"){
                 filterAZ = state.pokemons.sort(function(a,b){
-                    if(a.name < b.name) {return 1;}
-                    if(a.name > b.name) {return -1;}
+                    if(a.name.toUpperCase() < b.name.toUpperCase()) {return 1;}
+                    if(a.name.toUpperCase() > b.name.toUpperCase()) {return -1;}
                     return 0
                 })
             }

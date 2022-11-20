@@ -31,24 +31,16 @@ async function pokemonAPI(){
     const pokemonURLSt = pokemonURLAPIt.data.results.map((p) => p.url)
     
     const allURLS = pokemonURLS.concat(pokemonURLSt)
-    const allPromises = await Promise.all(allURLS)
-
-    // console.log(pokemonURLSt)
+    // const allPromises = await Promise.all(allURLS)
 
     let arrayPokemons = [];
 
-    for(i = 0; i < allPromises.length; i++){
-        const poke = await axios(allPromises[i]);
-        // console.log(poke.data)
+    for(i = 0; i < allURLS.length; i++){
+        const poke = await axios(allURLS[i]);
         arrayPokemons.push({
             id: poke.data.id,
             name: poke.data.name,
             attack: poke.data.stats[1].base_stat,
-            // height: poke.data.height,
-            // weight: poke.data.weight,
-            // hp: poke.data.stats[0].base_stat,
-            // defense: poke.data.stats[2].base_stat,
-            // speed: poke.data.stats[5].base_stat,
             img: poke.data.sprites.other.home.front_default,
             types: poke.data.types.map((p) => p.type.name),
             createdDB: false
@@ -70,23 +62,9 @@ async function pokemonByNameDB(value){
         where: {
             name: value,
         },
-        // attributes: [
-        //     "id",
-        //     "name",
-        //     "life",
-        //     "attack",
-        //     "defense",
-        //     "speed",
-        //     "height",
-        //     "weight",
-        //     "img",
-        //   ],
           include: {
             model: Type,
             attributes: ["name"],
-            // through: {
-            //     attributes: []
-            // },
           },
     })
     if(!pokeByNameDB.length){
@@ -130,7 +108,7 @@ async function pokemonByNameAPI(value){
         pokeArray.push(pokeDetail)
         return pokeArray
     }catch(err){
-        throw new Error("That pokemon does not exist")
+        return ("That pokemon does not exist")
     }
 }
 
@@ -143,9 +121,6 @@ async function pokemonById(id){
             include: {
                 model: Type,
                 attributes: ["id","name"],
-                // through: {
-                //     attributes: [],
-                // },
             },
         });
         let pokeArray = []
