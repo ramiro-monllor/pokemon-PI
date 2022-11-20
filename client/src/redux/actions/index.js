@@ -53,7 +53,7 @@ export function detailsPokemon(id){
 export function getPokemonName(name){
     return async function(dispatch){
         try{
-        let json = await axios.get(`http://localhost:3001/api/pokemons?name=${name}`)
+        let json = await axios.get(`${URL}/api/pokemons?name=${name}`)
         return dispatch({
             type: GET_POKEMON_NAME,
             payload: json.data
