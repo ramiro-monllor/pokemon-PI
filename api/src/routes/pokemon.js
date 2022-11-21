@@ -44,12 +44,37 @@ router.delete("/:idPokemon", async (req,res) => {
         const deleted = await Pokemon.destroy({
             where : {id : idPokemon}
         });
-        res.status(200).json(deleted)
+        res.status(200).send(`${deleted} pokemon/s removed`)
     }catch(err){
         res.status(404).send(err.message)
     }
 })
 
-// router.put("/")
+router.put("/:idPokemon", async (req,res) => {
+    try{
+        let {idPokemon} = req.params
+        let {name,height, weight, hp, attack, defense, speed, img, types} = req.body;
+        const updated = await Pokemon.update({
+            name: name,
+            height: height,
+            weight: weight,
+            hp: hp,
+            attack: attack,
+            defense: defense,
+            speed: speed,
+            img: img,
+            types: types
+        },
+        {
+            where: {
+                id: idPokemon
+            }
+        }
+        )
+        res.status(200).send(`${updated} pokemon/s updated`)
+    }catch(err){
+        res.status(404).send(err.message)
+    }
+})
 
 module.exports = router;

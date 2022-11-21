@@ -7,9 +7,6 @@ async function pokemonDB(){
         include: {
             model: Type,
             attributes: ["id", "name"],
-            through : {
-                attributes: [],
-            },
         }
     });
 
@@ -171,12 +168,12 @@ async function createPokemon(name,height, weight, hp, attack, defense, speed, im
             }
         })
         if(pokeDB){
-            return "El pokemon ya existe en la BD"
+            return "The pokemon already exists in the DB"
         }
         try{
             let pokeApi = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name.toLowerCase().trim()}`)
             if(pokeApi){
-                return "El pokemon ya existe en la API"
+                return "The pokemon already exists in the API"
             }
         }catch(e){
             let newPokemon = await Pokemon.create({
