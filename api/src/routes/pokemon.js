@@ -28,6 +28,7 @@ router.get("/:idPokemon", async (req,res) => {
     }
 })
 
+
 router.post("/", async (req,res) => {
     try{
         let {name,height, weight, hp, attack, defense, speed, img, types} = req.body;
@@ -49,6 +50,18 @@ router.delete("/:idPokemon", async (req,res) => {
         res.status(404).send(err.message)
     }
 })
+
+// router.delete("/id", async (req,res) => {
+//     try{
+//         const {id} = req.query
+//         const deleted = await Pokemon.destroy({
+//             where : {id : id}
+//         });
+//         res.status(200).send(`${deleted} pokemon/s removed`)
+//     }catch(err){
+//         res.status(404).send(err.message)
+//     }
+// })
 
 router.put("/:idPokemon", async (req,res) => {
     try{

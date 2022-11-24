@@ -145,7 +145,7 @@ async function pokemonById(id){
 async function getTypes(){
     let typesApiURL = await axios.get("https://pokeapi.co/api/v2/type")
     let typesAPI = typesApiURL.data.results.map((t) => t.name)
-    console.log(typesAPI)
+    // console.log(typesAPI)
 
     typesAPI.map((t) => Type.findOrCreate({
         where: {

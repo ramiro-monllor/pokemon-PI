@@ -14,7 +14,7 @@ export const CLEAR_DETAIL = "CLEAR_DETAIL"
 export const DELETE_POKEMON = "DELETE_POKEMON"
 
 // const URL = "http://localhost:3001"
-const URL = "https://pokemon-pi-production-aeba.up.railway.app"
+const URL = "https://pokemon-pi-production-aeba.http://localhost:3001up.railway.app"
 
 export function getPokemons(){
     return async function(dispatch){
@@ -25,6 +25,7 @@ export function getPokemons(){
         })
     }
 }
+
 
 export function getTypes(){
     return async function(dispatch){
@@ -107,10 +108,20 @@ export function clearDetail(payload){
     }
 }
 
+// export function deletePokemon(id){
+//     return async function(){
+//         try{
+//             return await axios.delete(`${URL}/api/pokemons/id?id=${id}`)
+//         }catch(e){
+//             console.log(e.message)
+//         }
+//     }
+// }
+
 export function deletePokemon(idPokemon){
-    return async function(dispatch){
+    return async function(){
         try{
-            return axios.delete(`${URL}/api/pokemons/`+idPokemon)
+            return await axios.delete(`${URL}/api/pokemons/${idPokemon}`)
         }catch(e){
             console.log(e.message)
         }
