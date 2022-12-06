@@ -19,7 +19,7 @@ const URL = "https://pokemon-pi-production-4a16.up.railway.app"
 
 export function getPokemons(){
     return async function(dispatch){
-        let json = await axios.get(`http://localhost:3001/api/pokemons`)
+        let json = await axios.get(`${URL}/api/pokemons`)
         return dispatch({
             type: GET_POKEMONS,
             payload: json.data
@@ -30,7 +30,7 @@ export function getPokemons(){
 
 export function getTypes(){
     return async function(dispatch){
-        let json = await axios.get(`http://localhost:3001/api/types`)
+        let json = await axios.get(`${URL}/api/types`)
         return dispatch({
             type: GET_TYPES,
             payload: json.data
@@ -41,7 +41,7 @@ export function getTypes(){
 export function detailsPokemon(id){
     return async function(dispatch){
         try{
-            let json = await axios.get(`http://localhost:3001/api/pokemons/${id}`)
+            let json = await axios.get(`${URL}/api/pokemons/${id}`)
             return dispatch({
                 type: DETAILS_POKEMON,
                 payload: json.data
@@ -55,7 +55,7 @@ export function detailsPokemon(id){
 export function getPokemonName(name){
     return async function(dispatch){
         try{
-        let json = await axios.get(`http://localhost:3001/api/pokemons?name=${name}`)
+        let json = await axios.get(`${URL}/api/pokemons?name=${name}`)
         return dispatch({
             type: GET_POKEMON_NAME,
             payload: json.data
@@ -69,7 +69,7 @@ export function getPokemonName(name){
 
 export function createPokemons(payload){
         return async function(){
-            let json = await axios.post(`http://localhost:3001/api/pokemons`,payload)
+            let json = await axios.post(`${URL}/api/pokemons`,payload)
             return json
         }
 }
@@ -112,7 +112,7 @@ export function clearDetail(payload){
 // export function deletePokemon(id){
 //     return async function(){
 //         try{
-//             return await axios.delete(`http://localhost:3001/api/pokemons/id?id=${id}`)
+//             return await axios.delete(`${URL}/api/pokemons/id?id=${id}`)
 //         }catch(e){
 //             console.log(e.message)
 //         }
@@ -122,7 +122,7 @@ export function clearDetail(payload){
 export function deletePokemon(idPokemon){
     return async function(){
         try{
-            return await axios.delete(`http://localhost:3001/api/pokemons/${idPokemon}`)
+            return await axios.delete(`${URL}/api/pokemons/${idPokemon}`)
         }catch(e){
             console.log(e.message)
         }
