@@ -14,7 +14,8 @@ export const CLEAR_DETAIL = "CLEAR_DETAIL"
 export const DELETE_POKEMON = "DELETE_POKEMON"
 
 // const URL = "http://localhost:3001"
-const URL = "https://pokemon-pi-production-aeba.up.railway.app"
+// const URL = "https://pokemon-pi-production-aeba.up.railway.app"
+const URL = "https://pokemon-pi-production-4a16.up.railway.app"
 
 export function getPokemons(){
     return async function(dispatch){
