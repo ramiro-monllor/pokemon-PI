@@ -127,3 +127,4 @@ export function deletePokemon(idPokemon){
         }
     }
 }
+console.log("a")
